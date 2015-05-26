@@ -11,3 +11,50 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+
+# shortcut to this dotfiles path is $DOTFILES
+export DOTFILES=$HOME/.dotfiles
+
+# your project folder that we can `c [tab]` to
+export WORKSPACE=~/workspace
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# all of our zsh files
+typeset -U config_files
+config_files=($DOTFILES/**/*.zsh)
+
+# load the path files
+for file in ${(M)config_files:#*/path.zsh}
+do
+  source $file
+done
+
+# load everything but the path and completion files
+for file in ${config_files:#(*oh-my-zsh*|*prezto*|*powerline*|*/path.zsh|*/completion.zsh)}
+do
+  source $file
+done
+
+# initialize autocomplete here, otherwise functions won't be loaded
+# this is done in modules/completion/init.zsh
+#zmodload -i zsh/complist
+#autoload -U compinit
+#compinit
+
+# load every completion after autocomplete loads
+for file in ${${(M)config_files:#*/completion.zsh}:#*oh-my-zsh*}
+do
+  source $file
+done
+
+# don't know who the heck is setting this..
+unset GREP_OPTIONS
+
+unset config_files
