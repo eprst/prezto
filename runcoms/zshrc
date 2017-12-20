@@ -26,12 +26,6 @@ then
   source ~/.localrc
 fi
 
-# source bashrc if available, for bash compatibility
-if [[ -a ~/.bashrc ]]
-then
-  source ~/.bashrc
-fi
-
 # all of our zsh files
 typeset -U config_files
 config_files=($DOTFILES/*/*.zsh)
@@ -62,5 +56,11 @@ done
 
 # don't know who the heck is setting this..
 unset GREP_OPTIONS
+
+# source bashrc if available, for bash compatibility
+if [[ -a ~/.bashrc ]]
+then
+  source ~/.bashrc
+fi
 
 unset config_files
