@@ -14,19 +14,13 @@
   fi
 } &!
 
-# run keychain
-if (( $+commands[keychain] )); then
-  keys=()
-  for k in $HOME/.ssh/*.pub; do keys+=${k:r:t}; done
-  keychain $keys
-  . ~/.keychain/`hostname`-sh
-  unset keys
-fi
+# Execute code only if STDERR is bound to a TTY.
+[[ -o INTERACTIVE && -t 2 ]] && {
 
-# Print a random, hopefully interesting, adage.
-if (( $+commands[fortune] )); then
-  if [[ -t 0 || -t 1 ]]; then
+  # Print a random, hopefully interesting, adage.
+  if (( $+commands[fortune] )); then
     fortune -s
     print
   fi
-fi
+
+} >&2
