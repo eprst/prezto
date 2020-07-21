@@ -63,4 +63,7 @@ then
   source ~/.bashrc
 fi
 
+# load gradle autocompleteion
+[[ -d ~/.zsh/gradle-completion ]] && fpath=(~/.zsh/gradle-completion $fpath)
+
 unset config_files
