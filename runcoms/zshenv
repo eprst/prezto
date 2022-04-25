@@ -80,4 +80,4 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
-. "$HOME/.cargo/env"
+[[ -d "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
