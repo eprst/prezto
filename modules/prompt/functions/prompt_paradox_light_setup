@@ -35,7 +35,7 @@ prompt_end() {
 function build_prompt {
   # prompt_segment black default '%(1?;%{%F{red}%}✘ ;)%(!;%{%F{yellow}%}⚡ ;)%(1j;%{%F{cyan}%}%j⚙ ;)%{%F{blue}%}%n%{%F{red}%}@%{%F{green}%}%M'
   # prompt_segment blue black '%2~'
-  prompt_segment '07' default '%(1?;%{%F{red}%}✘ ;)%(!;%{%F{yellow}%}⚡ ;)%(1j;%{%F{cyan}%}%j⚙ ;)%{%F{blue}%}%n%{%F{red}%}@%{%F{green}%}%M'
+  prompt_segment '07' default '%(1?;%{%F{red}%}✘ ;)%(!;%{%F{yellow}%}⚡ ;)%(1j;%{%F{cyan}%}%j⚙ ;)%{%F{blue}%}%n%{%F{red}%}@%{%F{green}%}%m'
   prompt_segment '14' '07' '%2~'
   if $git_status; then
     # prompt_segment green black '${(e)git_info[prompt]}${git_info[status]}'
