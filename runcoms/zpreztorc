@@ -35,21 +35,21 @@ PATH=$PATH:~/.dotfiles/zsh/fasd
 # The order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'terminal' \
   'editor' \
+  'terminal' \
   'history' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt' \
+  'git' \
   'archive' \
-  'syntax-highlighting' \
-  'history-substring-search' \
-  'ssh' \
-  'haskell' \
+  'prompt' \
   'fasd' \
-  'git'
+  'ssh' \
+  'syntax-highlighting' \
+  'history-substring-search'
+#  'haskell' \
 
 #
 # Autosuggestions
