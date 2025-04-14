@@ -72,3 +72,5 @@ unset config_files
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 export PATH=$PATH:/home/konstantin/.spicetify
+
+[[ -s "/Users/konstantin/.gvm/scripts/gvm" ]] && source "/Users/konstantin/.gvm/scripts/gvm"
