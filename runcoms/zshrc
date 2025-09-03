@@ -74,3 +74,5 @@ unset config_files
 export PATH=$PATH:/home/konstantin/.spicetify
 
 [[ -s "/Users/konstantin/.gvm/scripts/gvm" ]] && source "/Users/konstantin/.gvm/scripts/gvm"
+
+[[ -s "/home/konstantin/.gvm/scripts/gvm" ]] && source "/home/konstantin/.gvm/scripts/gvm"
