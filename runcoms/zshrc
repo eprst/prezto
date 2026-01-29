@@ -70,7 +70,3 @@ unset config_files
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# [[ -s "/Users/konstantin/.gvm/scripts/gvm" ]] && source "/Users/konstantin/.gvm/scripts/gvm"
-
-# [[ -s "/home/konstantin/.gvm/scripts/gvm" ]] && source "/home/konstantin/.gvm/scripts/gvm"
